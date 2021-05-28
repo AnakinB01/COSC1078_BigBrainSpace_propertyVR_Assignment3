@@ -1,0 +1,134 @@
+/* Universal Properties */
+
+body {
+  width: 100%;
+  background: linear-gradient(
+    -45deg,
+    #5680e9,
+    #5ab9ea,
+    #84ceeb,
+    rgb(99, 167, 231)
+  );
+  background-size: 200% 400%;
+  position: relative;
+  animation: change 10s infinite alternate;
+  padding-top: 200px;
+}
+
+/* Animation Values */
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  0% {
+    background-position: 100% 50%;
+  }
+  0% {
+    background-position: 0 50%;
+  }
+}
+
+
+/* Loader Properties*/
+
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #242f3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
+}
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  25% {
+    height: 0%;
+  }
+  50% {
+    height: 100%;
+  }
+  75% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
+
+
+/* Navbar Properties and Media Responsiveness */
+
+.navbar-toggle {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    padding-top: 430px;
+  }
+}
+
+/* Margin Values */
+
+.uploadmargin,
+.uploadtitle {
+  margin-top: 175px;
+  margin-bottom: 100px;
+}
+
+.uploadmargin {
+  margin-left: 50px;
+}
+
+.uploadtitle {
+  margin-right: 50px;
+}
+
+.form-group {
+  margin-top: 50px;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
+}
